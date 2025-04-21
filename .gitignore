@@ -52,3 +52,12 @@ CodeCoverage/
 *.VisualState.xml
 TestResult.xml
 nunit-*.xml
+
+# Ignorar configuración de JetBrains
+.idea/
+
+# Ignorar archivos de solución de Visual Studio
+*.sln
+
+# Ignorar archivos XML relacionados con AWS
+*.xml
