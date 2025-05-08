@@ -8,9 +8,9 @@ namespace CRUDAPIs.Presentation.Controller;
 [Route("api/[controller]")]
 public class ComentariosController : ControllerBase
 {
-    private readonly IDBServices<Comentarios> _comentarioService;
+    private readonly IDBRepository<Comentarios> _comentarioService;
 
-    public ComentariosController(IDBServices<Comentarios> comentarioService)
+    public ComentariosController(IDBRepository<Comentarios> comentarioService)
     {
         _comentarioService = comentarioService;
     }

@@ -4,11 +4,11 @@ using Microsoft.EntityFrameworkCore;
 
 namespace CRUDAPIs.Infrastructure.Repositories;
 
-public class DBServices<T> : IDBServices<T> where T : class
+public class DBRespository<T> : IDBRepository<T> where T : class
 {
     private readonly MySQLDBContext _context;
 
-    public DBServices(MySQLDBContext context)
+    public DBRespository(MySQLDBContext context)
     {
         _context = context;
     }

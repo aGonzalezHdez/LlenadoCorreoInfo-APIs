@@ -8,9 +8,9 @@ namespace CRUDAPIs.Presentation.Controller;
 [Route("api/[controller]")]
 public class ClienteController : ControllerBase
 {
-    private readonly IDBServices<Cliente> _clienteService;
+    private readonly IDBRepository<Cliente> _clienteService;
 
-    public ClienteController(IDBServices<Cliente> clienteService)
+    public ClienteController(IDBRepository<Cliente> clienteService)
     {
         _clienteService = clienteService;
     }
