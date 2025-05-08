@@ -1,6 +1,6 @@
 ﻿namespace CRUDAPIs.Application.Interfaces;
 
-public interface IDBServices<T> where T : class
+public interface IDBRepository<T> where T : class
 {
     Task<IEnumerable<T>> GetAllAsync();
     Task<T> GetByIdAsync(int id);
