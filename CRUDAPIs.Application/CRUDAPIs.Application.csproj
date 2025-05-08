@@ -6,4 +6,8 @@
         <Nullable>enable</Nullable>
     </PropertyGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\CRUDAPIs.Domain\CRUDAPIs.Domain.csproj" />
+    </ItemGroup>
+
 </Project>
