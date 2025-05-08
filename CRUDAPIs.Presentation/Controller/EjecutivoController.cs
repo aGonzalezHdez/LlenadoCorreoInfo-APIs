@@ -8,9 +8,9 @@ namespace CRUDAPIs.Presentation.Controller;
 [Route("api/[controller]")]
 public class EjecutivoController : ControllerBase
 {
-    private readonly IDBServices<Ejecutivo> _ejecutivoService;
+    private readonly IDBRepository<Ejecutivo> _ejecutivoService;
 
-    public EjecutivoController(IDBServices<Ejecutivo> ejecutivoService)
+    public EjecutivoController(IDBRepository<Ejecutivo> ejecutivoService)
     {
         _ejecutivoService = ejecutivoService;
     }
@@ -26,8 +26,8 @@ public class EjecutivoController : ControllerBase
     [HttpGet("{id}")]
     public async Task<ActionResult<Ejecutivo>> GetEjecutivoById(int id)
     {
-        var cliente = await _ejecutivoService.GetByIdAsync(id);
-        return cliente != null ? Ok(cliente) : NotFound();
+        var ejecutivo = await _ejecutivoService.GetByIdAsync(id);
+        return ejecutivo != null ? Ok(ejecutivo) : NotFound();
     }
 
     // ➕ Crear un nuevo ejecutivo
