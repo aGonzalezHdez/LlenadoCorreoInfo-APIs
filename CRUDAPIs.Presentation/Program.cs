@@ -1,3 +1,4 @@
+using CRUDAPIs.Application.Configuration;
 using CRUDAPIs.Infrastructure.Configuration;
 
 namespace CRUDAPIs.Presentation;
@@ -13,7 +14,8 @@ public class Program
         
         builder.Services.AddControllers();
         
-        // Add personal configurations 
+        // Add personal configurations
+        builder.Services.AddApplicationServices();
         builder.Services.AddInfrastructureServices();
 
         // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
