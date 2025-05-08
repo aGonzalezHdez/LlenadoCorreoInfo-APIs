@@ -10,6 +10,7 @@ public static class DependencyInjection
 {
     public static IServiceCollection AddInfrastructureServices(this IServiceCollection services)
     {
+        services.AddDbContextFactory<MySQLDBContext>();
         services.AddScoped(typeof(IDBServices<>), typeof(DBServices<>));
         return services;
     }
